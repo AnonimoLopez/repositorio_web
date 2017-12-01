@@ -413,6 +413,8 @@ DefaultTableModel mode1;
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         Menu m =new Menu();
+        m.setVisible(true);
+        dispose();
         
     }//GEN-LAST:event_jButton4ActionPerformed
 
