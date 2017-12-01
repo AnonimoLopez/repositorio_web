@@ -369,28 +369,32 @@ public class Cliente extends javax.swing.JFrame {
         // TODO add your handling code here:
         try{
          //String sql="UPDATE `agencia de viajes` SET `Id_ Cliente`=?,`Nombre`=?,`RFC`=?,`Direccion`=?,`Tel/Cel`=? WHERE `Id_ Cliente`=[?]";
-         String sql="UPDATE `agencia de viajes` `Nombre` = ?,`RFC` = ?,`Direccion` = ?,`Tel/Cel` = ?"
-                 + " WHERE `Id_ Cliente` = ?";
-         int datos =jTable1.getSelectedRow();
-         String dao=(String)jTable1.getValueAt(datos, 0);
+         String sql="UPDATE `agencia de viajes` set Nombre = '" + nom1.getText() + "', RFC = " + rfc1.getText()  + " ,Direccion = '" + rfc1.getText() +  "',`Tel/Cel` = 192"
+                 + " WHERE `Id_ Cliente` = 1";
+         //int datos =jTable1.getSelectedRow();
+         //String dao=(String)jTable1.getValueAt(datos, 0);
          PreparedStatement ps=conn.prepareStatement(sql);
-         ps.setString(1, cli1.getText());
-         ps.setString(2, nom1.getText());
-         ps.setString(3, rfc1.getText());
-         ps.setString(4, dir1.getText());
-         ps.setString(5, tel1.getText());
-         ps.setString(1, dao);
+//         ps.setString(1, cli1.getText());
+//         ps.setString(2, nom1.getText());
+//         ps.setString(3, rfc1.getText());
+//         ps.setString(4, dir1.getText());
+//         ps.setString(5, tel1.getText());
+       // ps.setString(1, dao);
+          JOptionPane.showMessageDialog(null, sql);
          
-          int n = ps.executeUpdate(sql);
-          
-          if(n>0){
-              Limpiar();
-              Llenar();
-              JOptionPane.showMessageDialog(null, "Datos Modificados");
-          }
          
+          int n = ps.executeUpdate();
+//            System.out.println(sql);
+//          if(n>0){
+//              Limpiar();
+//              Llenar();
+//              JOptionPane.showMessageDialog(null, "Datos Modificados");
+//          }
+           System.out.println(sql);
         }catch(Exception e){
-           JOptionPane.showMessageDialog(null, "rror"+e.getMessage()); 
+          
+            System.out.println(e.getMessage());
+           //JOptionPane.showMessageDialog(null, "rror"+e.getMessage()); 
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
