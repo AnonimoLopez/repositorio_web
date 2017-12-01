@@ -376,7 +376,7 @@ DefaultTableModel mode1;
             ps.setString(1, via1.getText());
             ps.setString(2, nom1.getText());
             ps.setString(3, des1.getText());
-            ps.setString(4, dir1.getText());
+            ps.setString(4, fsal1.getText());
             ps.setString(5, tel1.getText());
             ps.setString(1, dao);
 
@@ -412,6 +412,8 @@ DefaultTableModel mode1;
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        Menu m =new Menu();
+        
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
